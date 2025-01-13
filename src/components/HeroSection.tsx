@@ -14,7 +14,7 @@ const HeroSection = () => {
                     </p>
 
                     <h1 className="font-[400] text-[64px] font-[family-name:var(--font-jaro)] leading-[80px] text-[rgba(255,255,255,1)]">
-                        Rio Costanza's <br /> <span className="font-[400] text-[96px] font-[family-name:var(--font-jaro)] leading-[96px] text-[rgba(255,255,255,1)]">Solo Live</span> <span className="text-white font-[400] text-[24px] font-[family-name:var(--font-jeju-hallasan)] leading-[30px] text-[rgba(255,255,255,1)]">Performance</span>
+                    Rio Costanza&apos;s <br /> <span className="font-[400] text-[96px] font-[family-name:var(--font-jaro)] leading-[96px] text-[rgba(255,255,255,1)]">Solo Live</span> <span className="text-white font-[400] text-[24px] font-[family-name:var(--font-jeju-hallasan)] leading-[30px] text-[rgba(255,255,255,1)]">Performance</span>
                     </h1>
                     <p className="text-white font-[400] text-[24px] font-[family-name:var(--font-jaro)] leading-[30px] text-[rgba(255,255,255,1)]">AT DHAKA</p>
                     <div className="flex justify-center lg:justify-start space-x-4 mt-6">
@@ -46,7 +46,7 @@ const HeroSection = () => {
             {/* Event Details */}
             <div className="bg-[rgba(254,204,102,1)] py-2 rounded-[10px] ">
                 <div className="container mx-auto flex flex-col md:flex-row justify-between items-center text-sm text-gray-800 space-y-4 md:space-y-0">
-                    <p className="text-[rgba(59,2,2,1)] font-[400] text-[24px] font-[family-name:var(--font-jaro)] leading-[30px]">Rio Costanza's Solo Live Performance At Dhaka</p>
+                    <p className="text-[rgba(59,2,2,1)] font-[400] text-[24px] font-[family-name:var(--font-jaro)] leading-[30px]">       Rio Costanza&apos;s Solo Live Performance At Dhaka</p>
 
                     <div className="flex items-center space-x-2">
                         <svg width="28" height="32" viewBox="0 0 28 32" fill="none" xmlns="http://www.w3.org/2000/svg">
