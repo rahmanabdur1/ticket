@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 
-const HroSection = () => {
+const HeroSection = () => {
     return (
         <section className="container mx-auto h-[634px]   rounded-[15px] bg-[rgba(120,67,38,1)]">
             <div className=" flex flex-col lg:flex-row items-center ">
@@ -141,4 +141,4 @@ const HroSection = () => {
     );
 };
 
-export default HroSection;
+export default HeroSection;

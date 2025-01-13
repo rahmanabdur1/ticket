@@ -1,10 +1,10 @@
-import HroSection from "@/components/HroSection";
+import HeroSection from "@/components/HeroSection";
 import SearchBar from "@/components/SearchBar";
 
 export default function Home() {
   return (
     <>
-    <HroSection/>
+    <HeroSection/>
     <SearchBar/>
     </>
   );
