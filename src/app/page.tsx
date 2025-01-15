@@ -1,11 +1,12 @@
 import HeroSection from "@/components/HeroSection";
-import SearchBar from "@/components/SearchBar";
+
 
 export default function Home() {
   return (
-    <>
+    <div className=" z-0">
     <HeroSection/>
-    <SearchBar/>
-    </>
+  
+
+    </div>
   );
 }

@@ -1,5 +1,5 @@
 "use client";
-
+import Link from "next/link";
 import Image from "next/image";
 import React, { useState } from "react";
 
@@ -7,116 +7,137 @@ const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <nav className="shadow-[2px_2px_6px_0px_rgba(0,0,0,0.25)] h-[78px] m-[27px] rounded-[10px]">
+        <nav className="shadow-[2px_2px_6px_0px_rgba(0,0,0,0.25)] h-[100px] sm:m-[27px] m-[7px] rounded-[10px] relative">
             <div className="container mx-auto px-4 py-3 flex justify-between items-center h-full">
                 {/* Logo */}
                 <div>
                     <Image
                         src="/ticket_nav.jpg"
-                        width={86}
-                        height={30}
+                        width={83}
+                        height={28}
                         alt="Tickyto Logo"
                     />
                 </div>
-
-                {/* Desktop Menu */}
-                <ul className="hidden md:flex space-x-28">
-                    <li className="text-[rgba(56,48,88,1)] leading-[32px] text-[32px] font-[family-name:var(--font-jomhuria)]">
-                        Home
+                <ul className="hidden lg:flex space-x-16">
+                    <li>
+                        <Link href="/" className="text-[rgba(56,48,88,1)] hover:text-gray-400 text-center leading-[29px] text-[29px] font-[family-name:var(--font-jomhuria)] transition-all duration-300 ease-in-out">
+                            Home
+                        </Link>
                     </li>
                     <li>
-                        <a href="/events" className="hover:text-gray-600 leading-[32px] text-[32px] font-[family-name:var(--font-jomhuria)] text-[rgba(56,48,88,1)]">
+                        <Link href="/events" className="hover:text-gray-400 text-center leading-[29px] text-[29px] font-[family-name:var(--font-jomhuria)] text-[rgba(56,48,88,1)] transition-all duration-300 ease-in-out">
                             Events
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a href="/verify" className="hover:text-gray-600 leading-[32px] text-[32px] font-[family-name:var(--font-jomhuria)] text-[rgba(56,48,88,1)]">
+                        <Link href="/verify" className="hover:text-gray-400 text-center leading-[29px] text-[29px] font-[family-name:var(--font-jomhuria)] text-[rgba(56,48,88,1)] transition-all duration-300 ease-in-out">
                             Ticket Verify
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a href="/blog" className="hover:text-gray-600 leading-[32px] text-[32px] font-[family-name:var(--font-jomhuria)] text-[rgba(56,48,88,1)]">
+                        <Link href="/blog" className="hover:text-gray-400 text-center leading-[29px] text-[29px] font-[family-name:var(--font-jomhuria)] text-[rgba(56,48,88,1)] transition-all duration-300 ease-in-out">
                             Blog
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a href="/about" className="hover:text-gray-600 leading-[32px] text-[32px] font-[family-name:var(--font-jomhuria)] text-[rgba(56,48,88,1)]">
+                        <Link href="/about" className="hover:text-gray-400 text-center leading-[29px] text-[29px] font-[family-name:var(--font-jomhuria)] text-[rgba(56,48,88,1)] transition-all duration-300 ease-in-out">
                             About
-                        </a>
+                        </Link>
                     </li>
                 </ul>
 
                 {/* Buttons */}
-                <div className="hidden md:flex space-x-8">
-                    <button className="px-4 py-2 bg-[rgba(228,228,228,1)] leading-[32px] text-[32px] font-[family-name:var(--font-jomhuria)] shadow-[2px_2px_4px_0px_rgba(0,0,0,0.25)] text-[rgba(76,70,70,1)] rounded-md hover:bg-gray-700">
+                <div className="hidden lg:flex space-x-8">
+                    <button className="px-3 py-1.5 bg-[rgba(228,228,228,1)] text-center leading-[29px] text-[29px] font-[family-name:var(--font-jomhuria)] shadow-[2px_2px_4px_0px_rgba(0,0,0,0.25)] text-[rgba(76,70,70,1)] rounded-md hover:bg-[rgba(93,83,134,1)] hover:text-white transition-all duration-300 ease-in-out">
                         Log In
                     </button>
-                    <button className="px-4 py-2 bg-[rgba(93,83,134,1)] leading-[32px] text-[32px] font-[family-name:var(--font-jomhuria)] shadow-[2px_2px_4px_0px_rgba(0,0,0,0.25)] text-white rounded-md hover:bg-blue-500">
+                    <button className="px-3 py-1.5 bg-[rgba(93,83,134,1)] text-center leading-[29px] text-[29px] font-[family-name:var(--font-jomhuria)] shadow-[2px_2px_4px_0px_rgba(0,0,0,0.25)] text-white rounded-md hover:text-[rgba(76,70,70,1)] hover:bg-[rgba(228,228,228,1)] transition-all duration-300 ease-in-out">
                         Register
                     </button>
                 </div>
 
                 {/* Mobile Menu Toggle */}
                 <button
-                    className="md:hidden text-gray-800"
+                    className="lg:hidden text-gray-800 hover:text-gray-500 transition-all duration-300 ease-in-out"
                     onClick={() => setIsOpen(!isOpen)}
                 >
-                    <svg
-                        className="w-6 h-6"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
-                        <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d={isOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16m-7 6h7"}
-                        />
-                    </svg>
+                    {isOpen ? (
+                        <svg
+                            className="w-6 h-6 transition-all duration-300 ease-in-out"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M6 18L18 6M6 6l12 12"
+                            />
+                        </svg>
+                    ) : (
+                        <svg
+                            className="w-5 h-5 transition-all duration-300 ease-in-out"
+                            aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 17 14"
+                        >
+                            <path
+                                stroke="currentColor"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M1 1h15M1 7h15M1 13h15"
+                            />
+                        </svg>
+                    )}
                 </button>
 
                 {/* Mobile Menu */}
-                {isOpen && (
-                    <ul className="md:hidden space-y-4 p-4 absolute top-[78px] left-0 w-full bg-white shadow-md rounded-lg">
+                <div
+                    className={`lg:hidden transition-all duration-300 ease-in-out absolute top-[90px] left-0 w-full bg-white shadow-md  overflow-hidden ${isOpen ? "h-[300px] rounded-b-[10px]" : "h-[0px]"
+                        }`}
+                >
+                    <ul className="space-y-4 p-4 overflow-y-scroll h-full custom-scrollbar">
                         <li>
-                            <a href="/home" className="block leading-[32px] text-[32px] font-[family-name:var(--font-jomhuria)] text-[rgba(56,48,88,1)] hover:text-gray-600">
+                            <Link href="/" className="block text-center hover:text-gray-400 leading-[32px] text-[32px] font-[family-name:var(--font-jomhuria)] text-[rgba(56,48,88,1)] transition-all duration-300 ease-in-out">
                                 Home
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a href="/events" className="block hover:text-gray-600 leading-[32px] text-[32px] font-[family-name:var(--font-jomhuria)] text-[rgba(56,48,88,1)]">
+                            <Link href="/events" className="block text-center hover:text-gray-400 leading-[32px] text-[32px] font-[family-name:var(--font-jomhuria)] text-[rgba(56,48,88,1)] transition-all duration-300 ease-in-out">
                                 Events
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a href="/verify" className="block hover:text-gray-600 leading-[32px] text-[32px] font-[family-name:var(--font-jomhuria)] text-[rgba(56,48,88,1)]">
+                            <Link href="/verify" className="block text-center hover:text-gray-400 leading-[32px] text-[32px] font-[family-name:var(--font-jomhuria)] text-[rgba(56,48,88,1)] transition-all duration-300 ease-in-out">
                                 Ticket Verify
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a href="/blog" className="block hover:text-gray-600 leading-[32px] text-[32px] font-[family-name:var(--font-jomhuria)] text-[rgba(56,48,88,1)]">
+                            <Link href="/blog" className="block text-center hover:text-gray-400 leading-[32px] text-[32px] font-[family-name:var(--font-jomhuria)] text-[rgba(56,48,88,1)] transition-all duration-300 ease-in-out">
                                 Blog
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a href="/about" className="block hover:text-gray-600 leading-[32px] text-[32px] font-[family-name:var(--font-jomhuria)] text-[rgba(56,48,88,1)]">
+                            <Link href="/about" className="block text-center hover:text-gray-400 leading-[32px] text-[32px] font-[family-name:var(--font-jomhuria)] text-[rgba(56,48,88,1)] transition-all duration-300 ease-in-out">
                                 About
-                            </a>
+                            </Link>
                         </li>
 
-                        {/* Buttons */}
                         <div className="flex space-x-4">
-                            <button className="px-4 w-full py-2 bg-[rgba(228,228,228,1)] leading-[32px] text-[32px] font-[family-name:var(--font-jomhuria)] shadow-[2px_2px_4px_0px_rgba(0,0,0,0.25)] text-[rgba(76,70,70,1)] rounded-md hover:bg-gray-700">
+                            <button className="px-4 w-full py-2 bg-[rgba(228,228,228,1)] text-center leading-[32px] text-[32px] font-[family-name:var(--font-jomhuria)] shadow-[2px_2px_4px_0px_rgba(0,0,0,0.25)] text-[rgba(76,70,70,1)] hover:text-white rounded-md hover:bg-[rgba(93,83,134,1)] transition-all duration-300 ease-in-out">
                                 Log In
                             </button>
-                            <button className="w-full py-2 px-4 bg-[rgba(93,83,134,1)] leading-[32px] text-[32px] font-[family-name:var(--font-jomhuria)] shadow-[2px_2px_4px_0px_rgba(0,0,0,0.25)] text-white rounded-md hover:bg-blue-500">
+                            <button className="w-full py-2 px-4 bg-[rgba(93,83,134,1)] text-center leading-[32px] text-[32px] font-[family-name:var(--font-jomhuria)] shadow-[2px_2px_4px_0px_rgba(0,0,0,0.25)] text-white rounded-md hover:text-[rgba(76,70,70,1)] hover:bg-[rgba(228,228,228,1)] transition-all duration-300 ease-in-out">
                                 Register
                             </button>
                         </div>
+
                     </ul>
-                )}
+                </div>
             </div>
         </nav>
     );
