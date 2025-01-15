@@ -7,7 +7,7 @@ const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <nav className="shadow-[2px_2px_6px_0px_rgba(0,0,0,0.25)] h-[100px] sm:m-[27px] m-[7px] rounded-[10px] relative">
+        <nav className="shadow-[2px_2px_6px_0px_rgba(0,0,0,0.25)] h-[100px] sm:m-[27px] m-[7px] rounded-[10px] z-50 relative">
             <div className="container mx-auto px-4 py-3 flex justify-between items-center h-full">
                 {/* Logo */}
                 <div>
@@ -97,7 +97,7 @@ const Navbar = () => {
 
                 {/* Mobile Menu */}
                 <div
-                    className={`lg:hidden transition-all duration-300 ease-in-out absolute top-[90px] left-0 w-full bg-white shadow-md  overflow-hidden ${isOpen ? "h-[300px] rounded-b-[10px]" : "h-[0px]"
+                    className={`lg:hidden z-50 transition-all duration-300 ease-in-out absolute top-[90px] left-0 w-full bg-white shadow-md  overflow-hidden ${isOpen ? "h-[300px] rounded-b-[10px]" : "h-[0px]"
                         }`}
                 >
                     <ul className="space-y-4 p-4 overflow-y-scroll h-full custom-scrollbar">
